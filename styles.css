@@ -96,7 +96,7 @@ p { margin: 0; }
   transition: background-color .2s, color .2s, box-shadow .2s;
 }
 .topbar.is-solid { background: var(--blanco); color: var(--azul); box-shadow: 0 1px 0 var(--gris2); }
-.topbar__name { font-weight: 800; font-size: 1.05rem; text-decoration: none; letter-spacing: -.01em; }
+.topbar__name { font-weight: 800; font-size: 1.05rem; text-decoration: none; letter-spacing: -.01em; white-space: nowrap; }
 .topbar__nav { display: flex; gap: clamp(14px, 2.4vw, 32px); }
 .topbar__nav a { text-decoration: none; font-weight: 500; font-size: .95rem; padding: 6px 0; border-bottom: 2px solid transparent; }
 .topbar__nav a:hover { border-bottom-color: currentColor; }
@@ -267,6 +267,51 @@ p { margin: 0; }
 .reel iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: var(--blanco); }
 .reel__link { display: inline-block; margin-top: 12px; font-weight: 700; color: var(--blanco); text-underline-offset: 3px; }
 
+/* ---------- App: Amigo Secreto ---------- */
+.appcase__inner { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.appcase__text .h2 { margin-top: 16px; }
+.stack-list { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.stack-list li { padding: .3em .75em; border: 2px solid var(--negro); font-weight: 700; font-size: .92rem; }
+.appcase__h3 { margin-top: 32px; }
+.flow { margin: 0; padding: 0; list-style: none; counter-reset: flujo; display: grid; gap: 12px; }
+.flow li { counter-increment: flujo; display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; align-items: start; color: var(--texto-suave); }
+.flow li::before { content: counter(flujo); width: 32px; height: 32px; display: grid; place-items: center; background: var(--azul); color: var(--blanco); font-weight: 800; }
+.appcase__actions { margin-top: 28px; }
+.appcase__note { margin-top: 12px; font-size: .9rem; color: var(--texto-suave); }
+
+.seg { display: inline-flex; border: 2px solid var(--negro); margin-bottom: 26px; }
+.seg__btn { padding: .65em 1.2em; border: 0; background: var(--blanco); font-weight: 700; cursor: pointer; }
+.seg__btn + .seg__btn { border-left: 2px solid var(--negro); }
+.seg__btn[aria-selected="true"] { background: var(--negro); color: var(--blanco); }
+.seg__btn:not([aria-selected="true"]):hover { background: var(--gris2); }
+
+.appcase__stage { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(24px, 3.5vw, 44px); align-items: start; }
+.phone-wrap { display: flex; flex-direction: column; align-items: center; }
+.phone {
+  width: clamp(250px, 24vw, 300px); aspect-ratio: 390 / 844;
+  border: 10px solid var(--negro); border-radius: 46px; overflow: hidden; background: #FBF4EC;
+}
+.phone__screen { height: 100%; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: none; }
+.phone__screen::-webkit-scrollbar { display: none; }
+.phone__screen img { width: 100%; height: auto; }
+.phone__screen:focus-visible { outline-offset: -4px; }
+.phone__hint { margin-top: 12px; max-width: 26ch; text-align: center; font-size: .88rem; color: var(--texto-suave); }
+
+.appcase__caption { min-height: 132px; padding-bottom: 18px; border-bottom: 2px solid var(--negro); }
+.appcase__title { margin: 0 0 8px; font-weight: 800; font-size: 1.6rem; letter-spacing: -.02em; color: var(--azul); }
+.appcase__caption p { color: var(--texto-suave); }
+.screens { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 4px; }
+.screen-btn {
+  display: flex; align-items: center; gap: 12px; width: 100%;
+  padding: 10px 12px; border: 0; background: none; text-align: left; font-weight: 500; cursor: pointer;
+}
+.screen-btn__n { flex: none; width: 28px; height: 28px; display: grid; place-items: center; border: 2px solid var(--negro); font-weight: 800; font-size: .85rem; }
+.screen-btn:hover { background: #F0F0F3; }
+.screen-btn[aria-pressed="true"] { background: var(--amarillo); font-weight: 700; }
+.screen-btn[aria-pressed="true"] .screen-btn__n { background: var(--negro); color: var(--blanco); }
+
+.brand { border-top: 2px solid var(--gris2); }
+
 /* ---------- Marca ---------- */
 .brand__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
 .brand__block { padding: clamp(24px, 3vw, 36px); border: 2px solid var(--negro); }
@@ -358,6 +403,7 @@ p { margin: 0; }
 @media (max-width: 980px) {
   .accounts__list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .brand__grid { grid-template-columns: minmax(0, 1fr); }
+  .appcase__inner { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 820px) {
   .hero__inner { grid-template-columns: minmax(0, 1fr); }
@@ -372,7 +418,14 @@ p { margin: 0; }
 }
 @media (max-width: 560px) {
   body { font-size: 16px; }
-  .topbar__nav a:nth-child(3) { display: none; }
+  .topbar__nav a:nth-child(2), .topbar__nav a:nth-child(4) { display: none; }
+  .topbar__nav { gap: 12px; }
+  .appcase__stage { grid-template-columns: minmax(0, 1fr); }
+  .phone { width: min(78vw, 300px); }
+  .appcase__caption { min-height: 0; }
+  .screens { display: flex; overflow-x: auto; gap: 8px; padding-bottom: 6px; }
+  .screens li { flex: none; }
+  .screen-btn { border: 2px solid var(--negro); white-space: nowrap; }
   .accounts__list { grid-template-columns: minmax(0, 1fr); }
   .account__btn { min-height: 0; }
   .gallery__grid { columns: 2 140px; column-gap: 16px; }

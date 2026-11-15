@@ -31,5 +31,23 @@ window.PORTAFOLIO = {
     { id: "DeCRtoVRfWq", cuenta: "bio" },
     { id: "DeM_y8Qsztb", cuenta: "ibq" },
     { id: "DeCmlvsM0dz", cuenta: "ibq" }
-  ]
+  ],
+  app: {
+    repo: "https://github.com/breidycaicedo/amigo-secretopp",
+    participante: [
+      { id: "p1", h: 1688, titulo: "Entrada al juego",   texto: "Cada grupo entra por su propio enlace y escoge si se registra o entra." },
+      { id: "p2", h: 2592, titulo: "Registro",           texto: "Nombre, código, lista de deseos, fotos y papelito. Al escribir el nombre del papelito, la app sugiere a las personas ya registradas." },
+      { id: "p3", h: 1688, titulo: "Entrar",             texto: "Se entra con el código de estudiante y la sesión dura 14 días." },
+      { id: "p4", h: 3582, titulo: "Mi cuenta",          texto: "Antes del sorteo cada quien edita sus datos y sube hasta 4 fotos de lo que le gustaría recibir." },
+      { id: "p5", h: 3338, titulo: "Tu amigo secreto",   texto: "Después del sorteo solo ves a quién le regalas, con sus ideas y fotos." }
+    ],
+    administradora: [
+      { id: "a1", h: 2408, titulo: "Mis juegos",            texto: "Lista de juegos y formulario para crear uno nuevo, cada uno con su enlace." },
+      { id: "a2", h: 4322, titulo: "Panel del juego",       texto: "Registrados contra esperados, papelitos por revisar, problemas detectados y el botón Asignar todos." },
+      { id: "a3", h: 5620, titulo: "Participantes",         texto: "Estado de cada persona (OK, Pendiente, Verificar, Sin vincular o Conflicto) con opciones para confirmar o corregir." },
+      { id: "a4", h: 1862, titulo: "Asignaciones ocultas",  texto: "Quedan difuminadas hasta pulsar Mostrar, por si la administradora también juega." },
+      { id: "a5", h: 1966, titulo: "Asignaciones visibles", texto: "Quién le regala a quién y si salió de un papelito o del sorteo." },
+      { id: "a6", h: 3698, titulo: "Sorteo realizado",      texto: "Después de asignar, el juego queda bloqueado y nadie puede volver a sortear." }
+    ]
+  }
 };

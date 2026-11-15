@@ -248,6 +248,69 @@
     });
   }
 
+  /* ---------- App: Amigo Secreto ---------- */
+  var appGroup = "participante";
+  var appIndex = 0;
+
+  function showAppScreen(i) {
+    var list = D.app[appGroup];
+    appIndex = i;
+    var sc = list[i];
+    var img = $("#app-img");
+    img.src = "img/app/" + sc.id + ".webp";
+    img.height = sc.h;
+    img.alt = "Pantalla de Amigo Secreto (" + appGroup + "): " + sc.titulo;
+    $("#app-screen").scrollTop = 0;
+    $("#app-cap-title").textContent = sc.titulo;
+    $("#app-cap-text").textContent = sc.texto;
+    var btns = document.querySelectorAll(".screen-btn");
+    for (var k = 0; k < btns.length; k++) {
+      btns[k].setAttribute("aria-pressed", k === i ? "true" : "false");
+    }
+  }
+
+  function renderAppScreens() {
+    var ul = $("#app-screens");
+    ul.innerHTML = "";
+    D.app[appGroup].forEach(function (sc, i) {
+      var li = el("li");
+      var b = el("button", { "class": "screen-btn", type: "button", "aria-pressed": "false" },
+        '<span class="screen-btn__n">' + (i + 1) + "</span><span>" + sc.titulo + "</span>");
+      b.addEventListener("click", function () { showAppScreen(i); });
+      li.appendChild(b);
+      ul.appendChild(li);
+    });
+    showAppScreen(0);
+  }
+
+  function setAppGroup(group) {
+    appGroup = group;
+    var tabs = document.querySelectorAll(".seg__btn");
+    for (var k = 0; k < tabs.length; k++) {
+      var on = tabs[k].getAttribute("data-group") === group;
+      tabs[k].setAttribute("aria-selected", on ? "true" : "false");
+      tabs[k].setAttribute("tabindex", on ? "0" : "-1");
+      if (on) { $("#app-panel").setAttribute("aria-labelledby", tabs[k].id); }
+    }
+    renderAppScreens();
+  }
+
+  function bindApp() {
+    if (!D.app || !$("#app-panel")) { return; }
+    var tabs = document.querySelectorAll(".seg__btn");
+    for (var k = 0; k < tabs.length; k++) {
+      tabs[k].addEventListener("click", function (e) { setAppGroup(e.currentTarget.getAttribute("data-group")); });
+      tabs[k].addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+          var next = appGroup === "participante" ? "administradora" : "participante";
+          setAppGroup(next);
+          $("#tab-" + next).focus();
+        }
+      });
+    }
+    renderAppScreens();
+  }
+
   /* ---------- Paleta ---------- */
   var PALETTE = [
     { grupo: "Paleta principal" },
@@ -391,6 +454,7 @@
   renderFilters();
   renderGallery();
   renderReels();
+  bindApp();
   renderSwatches();
   heroCenefa();
   footCenefa();

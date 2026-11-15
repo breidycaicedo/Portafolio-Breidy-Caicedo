@@ -22,6 +22,7 @@
     <nav class="topbar__nav" aria-label="Secciones">
       <a href="#piezas">Piezas</a>
       <a href="#video">Video</a>
+      <a href="#app">App</a>
       <a href="#marca">Marca</a>
       <a href="#contacto">Contacto</a>
     </nav>
@@ -94,6 +95,56 @@
         </div>
       </div>
       <div class="reels" id="reels" tabindex="0" aria-label="Reels, desplázate horizontalmente"></div>
+    </section>
+
+    <!-- App: Amigo Secreto -->
+    <section class="section appcase" id="app" aria-labelledby="app-title">
+      <div class="wrap appcase__inner">
+        <div class="appcase__text">
+          <p class="tag tag--black">Proyecto personal</p>
+          <h2 id="app-title" class="h2">Amigo Secreto, una app web</h2>
+          <p class="section__lede">La hice para organizar el amigo secreto de mis grupos de amigos. Respeta los papelitos que ya existían, sortea los que faltan y deja que cada grupo juegue con su propio enlace. Tiene identidad propia: vino y crema, Fraunces para los títulos y Plus Jakarta Sans para los textos.</p>
+          <ul class="stack-list" aria-label="Tecnologías">
+            <li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li><li>Supabase</li><li>Vercel</li>
+          </ul>
+          <h3 class="h3 appcase__h3">Cómo funciona</h3>
+          <ol class="flow">
+            <li>La administradora crea un juego y comparte su enlace con el grupo.</li>
+            <li>Cada persona se registra con su código, su lista de deseos, hasta 4 fotos y, si tiene, el nombre de su papelito.</li>
+            <li>La administradora revisa: la app marca papelitos pendientes, por verificar o en conflicto.</li>
+            <li>Pulsa «Asignar todos»: se conservan los papelitos y se sortean los que faltan.</li>
+            <li>El juego queda bloqueado y cada quien ve solo a quién le regala.</li>
+          </ol>
+          <div class="appcase__actions">
+            <a class="btn btn--blue" href="https://github.com/breidycaicedo/amigo-secretopp" target="_blank" rel="noopener">Ver el código en GitHub</a>
+          </div>
+          <p class="appcase__note">Las capturas usan datos de ejemplo.</p>
+        </div>
+
+        <div class="appcase__viewer">
+          <div class="seg" role="tablist" aria-label="Escoge el tipo de usuario">
+            <button class="seg__btn" role="tab" type="button" id="tab-participante" aria-selected="true" aria-controls="app-panel" data-group="participante">Participante</button>
+            <button class="seg__btn" role="tab" type="button" id="tab-administradora" aria-selected="false" aria-controls="app-panel" data-group="administradora" tabindex="-1">Administradora</button>
+          </div>
+          <div class="appcase__stage" id="app-panel" role="tabpanel" aria-labelledby="tab-participante">
+            <div class="phone-wrap">
+              <div class="phone">
+                <div class="phone__screen" id="app-screen" tabindex="0" aria-label="Pantalla de la app. Desliza para verla completa.">
+                  <img id="app-img" src="img/app/p1.webp" alt="" width="780" height="1688">
+                </div>
+              </div>
+              <p class="phone__hint">Desliza dentro del celular para ver toda la pantalla</p>
+            </div>
+            <div class="appcase__side">
+              <div class="appcase__caption" aria-live="polite">
+                <h3 class="appcase__title" id="app-cap-title"></h3>
+                <p id="app-cap-text"></p>
+              </div>
+              <ul class="screens" id="app-screens"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Marca -->
