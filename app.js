@@ -76,6 +76,7 @@
     var px = null;
     function paint() {
       raf = null;
+      if (document.documentElement.classList.contains("music-on")) { return; }
       var bars = heroBars;
       var rects = bars.map(function (b) { var r = b.getBoundingClientRect(); return r.left + r.width / 2; });
       for (var i = 0; i < bars.length; i++) {
@@ -233,6 +234,7 @@
       box.appendChild(fig);
 
       cover.addEventListener("click", function () {
+        document.dispatchEvent(new CustomEvent("portafolio:pausar-musica"));
         var ifr = el("iframe", {
           src: "https://www.instagram.com/reel/" + r.id + "/embed/",
           title: label + " en Instagram",

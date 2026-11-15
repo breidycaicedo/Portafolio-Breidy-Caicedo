@@ -218,11 +218,27 @@
             <div><dt>Video</dt><dd>Premiere Pro, CapCut</dd></div>
             <div><dt>Idiomas</dt><dd>Español nativo, inglés C1, portugués A1</dd></div>
           </dl>
-          <div class="contact__actions">
-            <a class="btn btn--yellow" href="mailto:breidycaicedom@gmail.com">Escribirme</a>
-            <a class="btn btn--ghost" href="https://www.linkedin.com/in/breidy-caicedo-0939b9366/" target="_blank" rel="noopener">Ver mi LinkedIn</a>
-          </div>
-          <p class="contact__mail">breidycaicedom@gmail.com</p>
+          <h3 class="contact__h3">Escríbeme</h3>
+          <ul class="contact__links">
+            <li>
+              <a class="clink" href="mailto:breidy.caicedo@u.icesi.edu.co">
+                <span class="clink__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5.5" width="18" height="13"/><path d="M3.5 6.5l8.5 6 8.5-6"/></svg></span>
+                <span class="clink__text"><strong>Outlook</strong><span>breidy.caicedo@u.icesi.edu.co</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="clink" href="https://wa.me/573160444242?text=Hola%20Breidy%2C%20vi%20tu%20portafolio." target="_blank" rel="noopener">
+                <span class="clink__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H10l-5 4v-4H4z"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01"/></svg></span>
+                <span class="clink__text"><strong>WhatsApp</strong><span>316 044 4242</span></span>
+              </a>
+            </li>
+            <li>
+              <a class="clink" href="https://www.linkedin.com/in/breidy-caicedo-0939b9366/" target="_blank" rel="noopener">
+                <span class="clink__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="15"/><circle cx="9" cy="10.5" r="2.3"/><path d="M5.8 16.5c.7-1.8 1.8-2.7 3.2-2.7s2.5.9 3.2 2.7"/><path d="M14.5 9.5h3.5M14.5 13h3.5"/></svg></span>
+                <span class="clink__text"><strong>LinkedIn</strong><span>breidy-caicedo</span></span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="cenefa cenefa--double cenefa--static" id="cenefa-foot" aria-hidden="true"></div>
@@ -254,9 +270,15 @@
     </div>
   </div>
 
+  <button class="music" id="music-btn" type="button" aria-pressed="false">
+    <span class="music__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="music__label">Poner música</span>
+  </button>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <script src="data.js"></script>
   <script src="app.js"></script>
+  <script src="music.js"></script>
 </body>
 </html>
