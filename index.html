@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breidy Caicedo · Portafolio de diseño y contenido</title>
+  <meta name="description" content="Portafolio de Breidy Jireth Caicedo Mina: piezas gráficas y reels para las redes de Ingeniería en Energía Inteligente, Ingeniería Bioquímica, Biología y POWEX en la Universidad Icesi.">
+  <meta property="og:title" content="Breidy Caicedo · Portafolio">
+  <meta property="og:description" content="Diseño gráfico y contenido audiovisual para redes sociales.">
+  <meta property="og:image" content="img/03.webp">
+  <meta name="theme-color" content="#5454E9">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/pjs-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/pjs-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#piezas">Ir a las piezas</a>
+
+  <header class="topbar">
+    <a class="topbar__name" href="#inicio">Breidy Caicedo</a>
+    <nav class="topbar__nav" aria-label="Secciones">
+      <a href="#piezas">Piezas</a>
+      <a href="#video">Video</a>
+      <a href="#marca">Marca</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero: compuesto como una pieza Icesi, sobre la retícula de 16 módulos -->
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__inner">
+        <div class="hero__copy">
+          <p class="tag tag--black">Portafolio 2026</p>
+          <h1 id="hero-title" class="hero__name">
+            <span>Breidy</span>
+            <span>Caicedo</span>
+          </h1>
+          <p class="tag tag--white hero__role">Diseño gráfico y contenido audiovisual para redes</p>
+          <p class="hero__lede">Manejo las redes de tres programas de la Universidad Icesi siguiendo su manual de marca. Aquí están las piezas y los reels que he hecho.</p>
+          <div class="hero__actions">
+            <a class="btn btn--yellow" href="#piezas">Ver piezas</a>
+            <a class="btn btn--ghost" href="#video">Ver reels</a>
+          </div>
+        </div>
+
+        <div class="hero__stack" aria-label="Piezas destacadas">
+          <button class="stack-card" data-open="11" style="--r:-7deg; --x:-38%; --y:6%;">
+            <img src="img/11.webp" alt="Pieza para Biología: ¿Cómo se ve el amor desde la Biología?" width="1080" height="1335">
+          </button>
+          <button class="stack-card" data-open="14" style="--r:6deg; --x:34%; --y:4%;">
+            <img src="img/14.webp" alt="Pieza para Ingeniería Bioquímica: Proyecto de grado II" width="1080" height="1369">
+          </button>
+          <button class="stack-card stack-card--front" data-open="03" style="--r:-1deg; --x:0%; --y:0%;">
+            <img src="img/03.webp" alt="Pieza para Ingeniería en Energía Inteligente: Bienvenidos cohorte 2026-2" width="1080" height="1365">
+          </button>
+        </div>
+      </div>
+
+      <div class="cenefa" id="cenefa" aria-hidden="true"></div>
+    </section>
+
+    <!-- Cuentas -->
+    <section class="section accounts" aria-labelledby="cuentas-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="cuentas-title" class="h2">Las cuentas que manejo</h2>
+          <p class="section__lede">Empecé en 2026-1 con las redes de Ingeniería en Energía Inteligente. Por mi desempeño, en 2026-2 me asignaron también Ingeniería Bioquímica y Biología. Además, hago el contenido de POWEX, el encuentro de energía que cofundé.</p>
+        </div>
+        <ul class="accounts__list" id="accounts"></ul>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="section gallery" id="piezas" aria-labelledby="piezas-title">
+      <div class="wrap">
+        <div class="section__head section__head--row">
+          <h2 id="piezas-title" class="h2">Piezas gráficas</h2>
+          <div class="filters" role="group" aria-label="Filtrar por cuenta" id="filters"></div>
+        </div>
+        <p class="gallery__count" id="gallery-count" aria-live="polite"></p>
+        <ul class="gallery__grid" id="gallery"></ul>
+      </div>
+    </section>
+
+    <!-- Video -->
+    <section class="section video" id="video" aria-labelledby="video-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="video-title" class="h2 h2--light">Reels</h2>
+          <p class="section__lede section__lede--light">Grabación y edición en CapCut y Premiere Pro. Toca un reel para reproducirlo aquí mismo.</p>
+        </div>
+      </div>
+      <div class="reels" id="reels" tabindex="0" aria-label="Reels, desplázate horizontalmente"></div>
+    </section>
+
+    <!-- Marca -->
+    <section class="section brand" id="marca" aria-labelledby="marca-title">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 id="marca-title" class="h2">Cómo aplico el manual de marca</h2>
+          <p class="section__lede">Cada pieza sale del manual de identidad Icesi 2026. Estas son las reglas que uso todos los días.</p>
+        </div>
+
+        <div class="brand__grid">
+          <article class="brand__block brand__block--color">
+            <h3 class="h3">Color</h3>
+            <p>Azul Icesi y blanco mandan. La paleta complementaria me sirve para diferenciar cada programa y nunca va sola. Toca un color para copiar su código.</p>
+            <div class="swatches" id="swatches"></div>
+          </article>
+
+          <article class="brand__block brand__block--type">
+            <h3 class="h3">Tipografía</h3>
+            <p>Plus Jakarta Sans en todos sus pesos. Mayúsculas sostenidas solo en titulares de tres palabras o menos.</p>
+            <div class="type-specimen" aria-hidden="true">
+              <span class="ts ts--800">Aa<small>ExtraBold</small></span>
+              <span class="ts ts--700">Aa<small>Bold</small></span>
+              <span class="ts ts--500">Aa<small>Medium</small></span>
+              <span class="ts ts--400">Aa<small>Regular</small></span>
+            </div>
+            <p class="type-sample">Llega más lejos</p>
+          </article>
+
+          <article class="brand__block brand__block--cenefa">
+            <h3 class="h3">La cenefa</h3>
+            <p>El recurso gráfico que sale del símbolo del logo. Así se construye:</p>
+            <ol class="steps">
+              <li>
+                <div class="steps__art" aria-hidden="true"><i style="width:4px"></i><i style="width:10px"></i></div>
+                <p>Dos rectángulos de la misma altura y color: uno delgado y otro de al menos el doble de ancho.</p>
+              </li>
+              <li>
+                <div class="steps__art steps__art--spread" aria-hidden="true"><i style="width:4px"></i><i style="width:10px"></i></div>
+                <p>Cada uno va en un extremo del largo final que tendrá la cenefa.</p>
+              </li>
+              <li>
+                <div class="steps__art steps__art--full" aria-hidden="true" id="steps-full"></div>
+                <p>En medio, rectángulos que van engrosando hasta llegar al más ancho.</p>
+              </li>
+            </ol>
+          </article>
+
+          <article class="brand__block brand__block--blocks">
+            <h3 class="h3">Bloques de color</h3>
+            <p>Diagramo sobre una retícula de 16 módulos y separo la información con bloques de color, como en las reuniones de programa o los grupos de estudio.</p>
+            <div class="blocks-demo" aria-hidden="true">
+              <span class="bd bd--a"></span><span class="bd bd--b"></span><span class="bd bd--c"></span><span class="bd bd--d"></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="wrap contact__inner">
+        <div class="contact__about">
+          <h2 id="contacto-title" class="h2 h2--light">Sobre mí</h2>
+          <p>Soy Breidy Jireth Caicedo Mina. Estudio Ingeniería de Sistemas (4.º semestre) e Ingeniería en Energía Inteligente (2.º semestre) en la Universidad Icesi. Soy vicepresidenta del Consejo Estudiantil y cofundadora de POWEX Energy Meeting.</p>
+          <p>Me gusta que cada pieza se vea limpia, cumpla el manual y salga a tiempo, aunque esté manejando varias cuentas a la vez.</p>
+        </div>
+        <div class="contact__side">
+          <dl class="facts">
+            <div><dt>Diseño</dt><dd>Illustrator, Photoshop, Canva</dd></div>
+            <div><dt>Video</dt><dd>Premiere Pro, CapCut</dd></div>
+            <div><dt>Idiomas</dt><dd>Español nativo, inglés C1, portugués A1</dd></div>
+          </dl>
+          <div class="contact__actions">
+            <a class="btn btn--yellow" href="mailto:breidycaicedom@gmail.com">Escribirme</a>
+            <a class="btn btn--ghost" href="https://www.linkedin.com/in/breidy-caicedo-0939b9366/" target="_blank" rel="noopener">Ver mi LinkedIn</a>
+          </div>
+          <p class="contact__mail">breidycaicedom@gmail.com</p>
+        </div>
+      </div>
+      <div class="cenefa cenefa--double cenefa--static" id="cenefa-foot" aria-hidden="true"></div>
+      <footer class="foot wrap">
+        <p>Portafolio personal. Las piezas se publicaron en las cuentas oficiales de los programas de la Universidad Icesi y de POWEX.</p>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Visor de piezas -->
+  <div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-labelledby="viewer-title" hidden>
+    <div class="viewer__backdrop" data-close></div>
+    <div class="viewer__body">
+      <figure class="viewer__figure">
+        <img id="viewer-img" src="" alt="">
+      </figure>
+      <aside class="viewer__info">
+        <p class="tag" id="viewer-account"></p>
+        <h3 class="viewer__title" id="viewer-title"></h3>
+        <p class="viewer__meta" id="viewer-meta"></p>
+        <a class="btn btn--blue" id="viewer-link" href="#" target="_blank" rel="noopener">Ver en Instagram</a>
+        <div class="viewer__nav">
+          <button class="iconbtn" id="viewer-prev" aria-label="Pieza anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+          <span id="viewer-pos"></span>
+          <button class="iconbtn" id="viewer-next" aria-label="Pieza siguiente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+        </div>
+      </aside>
+      <button class="iconbtn viewer__close" data-close aria-label="Cerrar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
